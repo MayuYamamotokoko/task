@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style type="text/css">
+    
+body{
+    padding: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #FEECD8;
+}
+header {
+  width: 100%;
+  padding: 15px 0;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #DFC6A8;
+}
+header .headline{
+  font-size: 32px;
+}
+.nav-list {
+  text-align: center;
+  padding: 10px 0;
+  margin: 0 auto;
+}
+.nav-list-item {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+}
+div.title1{
+    background-color: #D7AFA8;
+    height: 50px;
+    width: auto;
+    line-height: 50px;
+    font-size: 30px;
+    color: oldlace;
+    display: flex;
+    justify-content: center;
+}
+div.title2{
+    background-color: #D7AFA8;
+    height: 50px;
+    width: auto;
+    line-height: 50px;
+    font-size: 30px;
+    color: oldlace;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+div.content{
+    background-color: #FDEFEC;
+    border: 5px outset #683D46;
+    width: 700px;
+    height: 500px;
+    font-size: large;
+    display: inline-block;
+    vertical-align: top;
+}
+div.figure{
+    background-image: url("img/classroom2.jpg");
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 550px;
+    display: inline-block;
+}
+div.title3{
+    background-color: #D7AFA8;
+    height: 50px;
+    width: auto;
+    line-height: 50px;
+    font-size: 30px;
+    color: oldlace;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+#mypic1,#mypic2{
+    cursor: pointer;
+}
+footer {
+  width: 100%;
+  height: 100px; 
+  text-align: center;
+  padding: 50px 0;
+  background-color: #DFC6A8;
+}
+.footer-text {
+  color: #000;
+}
+    </style>
+
+    <title>制作課題</title>
+
+</head>
+<body>
+<header>
+    <h1 class="headline">
+      <a>自己PRとあれそれ</a>
+    </h1>
+    <ul class="nav-list">
+      <li class="nav-list-item">
+        <a>自己PR</a>
+      </li>
+      <li class="nav-list-item">学生時代に力を入れたこと</li>
+      <li class="nav-list-item">趣味・特技</li>
+    </ul>
+  </header>
+    <div class="title1">
+        自己PR
+    </div>
+    <img id="mypic1" onclick="slideshow1()" src="img/pc.jpg" width="1230" height="500">
+    <div class="title2">
+        学生時代に力を入れたこと
+    </div>
+    <div class="figure">
+    </div>
+    <div class="content">
+        私が学生生活で力を入れた事はオープンキャンパスのスタッフです。<br>
+        その中でも司会を任せて頂いたことです。入学してすぐに友人と共に始め、夏頃に司会を経験させて頂いたのですが上手くいかず、当時一緒に司会をやっていた先輩に任せきりになってしまい、とても不甲斐ない思いをしました。<br>
+        なので私は自ら2回目の司会に名乗り出て、前回の反省を生かし率先的に進行していくことで、先輩が参加できなくなってしまった秋のオープンキャンパスを成功に導くことが出来ました。<br>
+        また、私たちが参加できる最後のオープンキャンパスでは教授方から司会への推薦をいただき、５人という少ないスタッフでの開催でも躓くことなく進め進めていくことができました。<br>
+        この経験から私は、失敗を恐れず、悔しさをばねに自ら進んで物事に挑戦することの大切さを学びました。
+    </div>
+    <div class="title3">
+        趣味・特技
+    </div>
+    <img id="mypic2" onclick="slideshow2()" src="img/ps4.jpg" width="1230" height="500">
+    <footer>
+        <p>© All rights reserved by mayu.</p>
+    </footer>
+
+    <script>
+        'use strict'
+
+        var pics_src1 = new Array("img/pc.jpg","img/pc2.jpg");
+        var num = 0;
+
+        function　slideshow1(){
+            if(num == 1){
+                num = 0;
+            }
+            else{
+                num ++;
+            }
+            document.getElementById("mypic1").src=pics_src1[num];
+        }
+
+        var pics_src2 = new Array("img/ps4.jpg","img/ps42.jpg");
+        var num = 0;
+
+        function　slideshow2(){
+            if(num == 1){
+                num = 0;
+            }
+            else{
+                num ++;
+            }
+            document.getElementById("mypic2").src=pics_src2[num];
+        }
+
+    </script>
+</html>
